@@ -1,0 +1,123 @@
+.card {
+  position: relative;
+  width: 165px;
+  height: 110px;
+  box-sizing: border-box;
+  background-color: #ffffff;
+  border: 5px solid #222;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+  padding: 10px;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px,
+          rgba(0, 0, 0, 0.23) 0px 6px 6px,
+          inset rgba(0, 0, 0, 0.19) 0px 10px 20px,
+          inset rgba(0, 0, 0, 0.23) 0px 6px 6px;
+  transition: all ease-in-out 0.3s;
+  overflow: hidden;
+}
+
+.card:hover {
+  box-shadow: #363636 0px 10px 20px,
+  #363636 0px 6px 6px,
+          inset rgba(0, 0, 0, 0.19) 0px 10px 20px,
+          inset rgba(0, 0, 0, 0.23) 0px 6px 6px;
+  border: 5px solid #363636;
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px;
+
+  a {
+    font-size: 14px;
+  }
+
+  p {
+    font-size: 12px;
+  }
+}
+
+.avatar {
+  display: flex; /* Dùng flexbox để căn chỉnh ảnh và tên trong cùng một hàng */
+  align-items: center; /* Căn giữa ảnh và tên theo chiều dọc */
+  width: auto; /* Đảm bảo chiều rộng phù hợp */
+}
+
+.avatar img {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%; /* Làm tròn ảnh đại diện */
+  object-fit: cover; /* Giữ tỉ lệ ảnh mà không bị kéo dãn */
+}
+
+.name {
+  margin-left: 10px; /* Tạo khoảng cách giữa ảnh và tên */
+  color: var(--BlackBG-100);
+  font-size: 14px;
+  font-weight: bold;
+}
+
+
+
+/* btn */
+.buttonContainer {
+  display: flex;
+  flex: 1;
+  min-width: fit-content;
+
+  button {
+    flex-shrink: 0;
+
+    @media (max-width: 1200px) {
+      margin-bottom: 10px;
+    }
+  }
+}
+
+.btnAdminGroup {
+  padding: 5px 4px;
+  border: 2px solid #2c2c2c;
+  background-color: #1a1a1a;
+  color: #ffffff;
+  font-size: 0.75rem;
+  cursor: pointer;
+  border-radius: 10px;
+  transition: all 0.4s ease;
+  outline: none;
+  position: relative;
+  overflow: hidden;
+  font-weight: bold;
+  text-align: center;
+  width: 55px;
+  margin-left: 4px;
+  /* Thay đổi chiều dài của nút */
+  /* text-align: center; */
+  /* Căn giữa chữ */
+}
+
+.btnAdminGroup::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle,
+      rgba(255, 255, 255, 0.25) 0%,
+      rgba(255, 255, 255, 0) 70%);
+  transform: scale(0);
+  transition: transform 0.5s ease;
+}
+
+.btnAdminGroup:hover::after {
+  transform: scale(4);
+}
+
+.btnAdminGroup:hover {
+  border-color: #666666;
+  background: #292929;
+}

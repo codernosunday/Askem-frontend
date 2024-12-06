@@ -1,0 +1,67 @@
+.buttonContainer {
+    display: flex;
+    flex: 1;
+    /* justify-content: flex-end; */
+    min-width: fit-content;
+
+    button {
+        flex-shrink: 0;
+
+        @media (max-width: 1200px) {
+            margin-bottom: 10px;
+        }
+    }
+}
+
+.btndatcauhoi {
+    padding: 10px 8px;
+    /* Tăng padding để nút dài hơn */
+    border: 2px solid #2c2c2c;
+    background-color: #1a1a1a;
+    color: #ffffff;
+    /* Màu chữ là trắng */
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: all 0.4s ease;
+    outline: none;
+    position: relative;
+    overflow: hidden;
+    font-weight: bold;
+    text-align: center;
+    width: 120px;
+    margin-left: 10px;
+    /* Thay đổi chiều dài của nút */
+    /* text-align: center; */
+    /* Căn giữa chữ */
+}
+
+.btndatcauhoi::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle,
+            rgba(255, 255, 255, 0.25) 0%,
+            rgba(255, 255, 255, 0) 70%);
+    transform: scale(0);
+    transition: transform 0.5s ease;
+}
+
+.btndatcauhoi:hover::after {
+    transform: scale(4);
+}
+
+.btndatcauhoi:hover {
+    border-color: #666666;
+    background: #292929;
+}
+
+.Thisisaprivategroup {
+    margin-left: 420px;
+    font-size: 20px;
+    color: #505050; /* Adjust the color to your desired light shade */
+    font-weight: bold; /* Makes the text bold */
+}

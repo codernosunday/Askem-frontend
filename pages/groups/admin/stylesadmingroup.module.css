@@ -1,0 +1,99 @@
+/* .container {
+    padding: 24px 12px 24px 24px;
+    color: var(--TextWhite-100);
+  }
+  
+  .borderBottom {
+    border-bottom: 1px solid var(--black-100);
+  }
+  
+  .title {
+    display: flex;
+    flex-wrap: wrap-reverse;
+    align-items: center;
+    word-break: break-word;
+  
+    h1 {
+      font-size: 27px;
+      max-width: 950px;
+    }
+  }
+  
+  .summary {
+    margin-top: 20px;
+    font-size: 15px;
+    max-width: 630px;
+  }
+   */
+/* .container {
+    display: flex;
+    min-width: fit-content;
+} */
+
+.buttonContainer {
+  display: flex;
+  flex: 1;
+  justify-content: flex-end; /* Đẩy các nút về góc phải */
+  align-items: center; /* Canh giữa theo chiều dọc nếu cần */
+  min-width: fit-content;
+  padding-right: 20px; /* Thêm khoảng cách từ nút đến cạnh phải */
+
+  button {
+      flex-shrink: 0;
+      margin-left: 10px; /* Thêm khoảng cách giữa các nút */
+
+      @media (max-width: 1200px) {
+          margin-bottom: 10px; /* Giữ lại cho màn hình nhỏ */
+      }
+  }
+}
+
+.btnAdminGroup {
+    padding: 10px 8px;
+    /* Tăng padding để nút dài hơn */
+    border: 2px solid #2c2c2c;
+    background-color: #1a1a1a;
+    color: #ffffff;
+    /* Màu chữ là trắng */
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: all 0.4s ease;
+    outline: none;
+    position: relative;
+    overflow: hidden;
+    font-weight: bold;
+    text-align: center;
+    width: 140px;
+    margin-left: 4px;
+    /* Thay đổi chiều dài của nút */
+    /* text-align: center; */
+    /* Căn giữa chữ */
+}
+
+.btnAdminGroup::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle,
+            rgba(255, 255, 255, 0.25) 0%,
+            rgba(255, 255, 255, 0) 70%);
+    transform: scale(0);
+    transition: transform 0.5s ease;
+}
+
+.btnAdminGroup:hover::after {
+    transform: scale(4);
+}
+
+.btnAdminGroup:hover {
+    border-color: #666666;
+    background: #292929;
+}
+
+
+
+

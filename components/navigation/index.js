@@ -1,0 +1,51 @@
+import React, { useContext } from 'react'
+import { useRouter } from 'next/router'
+
+import NavItem from './nav-item'
+import { World } from '../icons'
+
+import styles from './navigation.module.css'
+import { AuthContext } from '../../store/auth'
+const Navigation = () => {
+  const router = useRouter()
+  const { authState, isAdmin } = useContext(AuthContext)
+  return (
+    <nav className={styles.nav}>
+      <NavItem
+        href="/"
+        selected={
+          router.pathname == '/' || router.pathname.split('/')[1] == 'questions'
+        }
+      >
+        <World />
+        <span>Askem</span>
+      </NavItem>
+
+      <NavItem href="/tags" selected={router.pathname == '/tags'}>
+        <span>Tags</span>
+      </NavItem>
+
+      <NavItem
+        href="/users"
+        selected={router.pathname.split('/')[1] == 'users'}
+      >
+        <span>Users</span>
+      </NavItem>
+      <NavItem
+        href="/groups"
+        selected={router.pathname == '/groups'}
+      >
+        <span>Groups</span>
+      </NavItem>
+      {isAdmin() && (<NavItem
+        href="/administrator"
+        selected={router.pathname == '/administrator'}
+      >
+        <span>Administator</span>
+      </NavItem>)}
+
+    </nav>
+  )
+}
+
+export default Navigation

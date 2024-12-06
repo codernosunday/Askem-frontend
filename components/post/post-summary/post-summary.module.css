@@ -1,0 +1,91 @@
+.postCell {
+  width: auto;
+  padding-right: 16px;
+  vertical-align: top;
+  grid-column: 2;
+}
+
+.text {
+  margin-bottom: 15px;
+  font-size: 15px;
+  line-height: 1.3;
+  white-space: pre-wrap;
+  word-break: break-word;
+
+  p {
+    margin-bottom: 1em;
+  }
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.tagContainer {
+  flex: 1 auto;
+  margin-bottom: 8px;
+}
+
+.userDetails {
+  display: flex;
+  flex-shrink: 0;
+  font-size: 12px;
+  align-items: center;
+
+  img {
+    width: 32px;
+    height: 32px;
+    border-radius: 1px;
+  }
+
+  span {
+    color: var(--TextWhite-200);
+  }
+
+  .info {
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+  }
+}
+
+.delete {
+  color: #ffffff; /* Giữ nguyên màu chữ trắng */
+  background-color: #b40808cc; /* Thay đổi màu nền thành màu nền của .btnlogout */
+  border: 2px solid #2c2c2c; /* Thay đổi border thành 2px và màu giống .btnlogout */
+  box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.4);
+  padding: 0.8em;
+  display: inline-flex; /* Sử dụng inline-flex để căn giữa nội dung */
+  align-items: center; /* Căn giữa theo chiều dọc */
+  justify-content: center; /* Căn giữa theo chiều ngang */
+  width: 130px; /* Có thể thay đổi thành một giá trị cụ thể nếu muốn */
+  height: 30px;
+  border-radius: 8px;
+
+  &:hover {
+    color: #ffffff; /* Giữ nguyên màu chữ trắng khi hover */
+    background-color: #e50606; /* Thay đổi màu nền khi hover giống .btnlogout */
+    border-color: #666666; /* Thay đổi màu viền khi hover giống .btnlogout */
+  }
+
+  &:active {
+    background-color: #1a1a1a; /* Giữ nguyên màu nền khi active */
+    box-shadow: none;
+  }
+
+  &:focus {
+    color: #ffffff; /* Giữ nguyên màu chữ trắng khi focus */
+    background-color: #292929; /* Thay đổi màu nền khi focus giống .btnlogout */
+    outline: none;
+    box-shadow: 0 0 0 4px rgba(0, 149, 255, 0.15);
+  }
+}

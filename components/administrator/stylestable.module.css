@@ -1,0 +1,65 @@
+.tableContainer {
+    overflow-x: auto;
+    margin: 20px 0;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 7px;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: Arial, sans-serif;
+}
+
+.tableHeader {
+    background-color: var(--blueDark);
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 10px;
+}
+
+.tableRow:nth-child(even) {
+    background-color: var(--Gray-100);
+}
+
+.tableRow:hover {
+    background-color: var(--GrayBorder-100);
+}
+
+.tableCell,
+.tableHeader {
+    padding: 12px 15px;
+    text-align: left;
+}
+
+.profilePhoto {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+}
+
+.loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    width: 100px;
+}
+
+.deleteButton {
+    padding: 6px 12px;
+    color: #ffffff;
+    background-color: #ff4d4d;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.deleteButton:hover {
+    background-color: #ff1a1a;
+}

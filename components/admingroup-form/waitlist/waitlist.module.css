@@ -1,0 +1,15 @@
+.btncontainer {
+    float: left;
+}
+
+.btnWaitList {
+    margin: 5px;
+    color: white;
+    background-color: black;
+    padding: 5px 8px;
+
+}
+
+.btnWaitList:hover {
+    font-weight: bolder;
+}

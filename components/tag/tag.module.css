@@ -1,0 +1,63 @@
+.tag {
+  display: inline-block;
+  color: #000000;
+  /* Đặt màu chữ tag thành đen */
+  font-size: 1em;
+  background-color: #e0e0e0;
+  /* Đặt nền tag thành màu xám nhạt */
+  padding: 5px 15px 7px;
+  border-radius: 70em;
+  margin: 8px 6px 8px 0;
+  margin-left: 0px;
+  position: relative;
+  text-transform: lowercase;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+
+  &:active {
+    color: var(--TextWhite-100);
+  }
+
+  &:hover {
+    color: var(--TextWhite-100);
+    background-color: var(--blueDark);
+    /* Đặt màu nền khi hover thành màu xám đậm hơn */
+  }
+}
+
+.multiplier {
+  color: var(--black-400);
+}
+
+.count {
+  color: var(--black-500);
+  font-size: 11px;
+}
+
+.taglayout {
+  display: inline-block;
+  color: #000000;
+  /* Đặt màu chữ tag thành đen */
+  font-size: 1em;
+  width: 75%;
+  background-color: #e0e0e0;
+  /* Đặt nền tag thành màu xám nhạt */
+  padding: 5px 15px 7px;
+  border-radius: 70em;
+  margin: 8px 6px 8px 0;
+  margin-left: 0px;
+  position: relative;
+  text-transform: lowercase;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+
+  &:active {
+    color: var(--TextWhite-100);
+  }
+
+  &:hover {
+    color: var(--TextWhite-100);
+    background-color: var(--blueDark);
+    /* Đặt màu nền khi hover thành màu xám đậm hơn */
+  }
+}

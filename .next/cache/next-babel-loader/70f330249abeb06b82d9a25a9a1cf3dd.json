@@ -1,0 +1,1 @@
+{"ast":null,"code":"var __jsx = React.createElement;\nimport React from 'react';\nimport styles from './question-wrapper.module.css';\nconst QuestionWrapper = ({\n  children\n}) => {\n  return __jsx(\"div\", {\n    className: styles.card\n  }, children);\n};\nexport default QuestionWrapper;","map":null,"metadata":{},"sourceType":"module"}

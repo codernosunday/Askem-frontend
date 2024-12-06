@@ -2,5 +2,17 @@
   "/_app": "pages/_app.js",
   "/_document": "pages/_document.js",
   "/_error": "pages/_error.js",
-  "/": "pages/index.js"
+  "/administrator": "pages/administrator.html",
+  "/auth": "pages/auth.html",
+  "/groups/[group]": "pages/groups/[group].js",
+  "/groups/admin": "pages/groups/admin.html",
+  "/groups/ask": "pages/groups/ask.html",
+  "/groups/createGroup": "pages/groups/createGroup.html",
+  "/groups": "pages/groups.html",
+  "/": "pages/index.html",
+  "/questions/[slug]": "pages/questions/[slug].js",
+  "/questions/ask": "pages/questions/ask.html",
+  "/tags": "pages/tags.html",
+  "/users/[username]": "pages/users/[username].js",
+  "/users": "pages/users.html"
 }

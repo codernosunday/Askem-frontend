@@ -1,0 +1,1 @@
+{"ast":null,"code":"module.exports = {\n  title: 'Askem',\n  description: 'CNTT2',\n  siteUrl: 'https://askem.com',\n  googleAnalytic: '',\n  author: {\n    email: '21004102@st.vlute.edu.vn',\n    name: 'Codernosunday'\n  },\n  lang: 'en'\n};","map":null,"metadata":{},"sourceType":"script"}

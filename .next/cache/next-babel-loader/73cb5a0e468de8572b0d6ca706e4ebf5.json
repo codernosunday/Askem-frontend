@@ -1,0 +1,1 @@
+{"ast":null,"code":"var __jsx = React.createElement;\nimport React from 'react';\nimport styles from './tag-list.module.css';\nconst TagList = ({\n  children\n}) => {\n  return __jsx(\"div\", {\n    className: styles.container\n  }, children);\n};\nexport default TagList;","map":null,"metadata":{},"sourceType":"module"}

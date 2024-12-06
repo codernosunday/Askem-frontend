@@ -1,0 +1,1 @@
+{"ast":null,"code":"var __jsx = React.createElement;\nimport React from 'react';\nimport styles from './user-card.module.css';\nconst AvatarCard = ({\n  children\n}) => {\n  return __jsx(\"div\", {\n    className: styles.container\n  }, children);\n};\nexport default AvatarCard;","map":null,"metadata":{},"sourceType":"module"}

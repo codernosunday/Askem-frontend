@@ -8,7 +8,7 @@ import QuestionStats from '../../question/question-stats'
 import QuestionSummary from '../../question/question-summary'
 import ButtonGroup from '../../button-group'
 import { Spinner } from '../../icons'
-import styles from './waitList.module.css'
+import styles from './waitlist.module.css'
 const AdminFormGroupQuestion = () => {
     const router = useRouter()
     const { authAxios } = useContext(FetchContext)

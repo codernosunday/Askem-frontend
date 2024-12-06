@@ -1,0 +1,1 @@
+{"ast":null,"code":"var __jsx = React.createElement;\nimport React from 'react';\nimport styles from './user-list.module.css';\nvar UserList = function UserList(_ref) {\n  var children = _ref.children;\n  return __jsx(\"div\", {\n    className: styles.container\n  }, children);\n};\nexport default UserList;","map":null,"metadata":{},"sourceType":"module"}

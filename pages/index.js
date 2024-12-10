@@ -52,7 +52,7 @@ const HomePage = () => {
   }
 
   return (
-    <Layout>
+    <Layout footer={true}>
       <Head>
         <title>
           {router.query.tag ? router.query.tag : 'Questions'} - Askem

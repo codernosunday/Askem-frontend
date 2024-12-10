@@ -55,8 +55,8 @@
   font-family: sans-serif;
 
   &:hover {
-    color: var(--TextWhite-200);
-    background-color: var(--Gray-100);
+    color: var(--skin-100);
+    background-color: #363636;
   }
 
   @media (--m) {

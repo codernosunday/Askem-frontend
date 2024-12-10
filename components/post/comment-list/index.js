@@ -4,7 +4,7 @@ import { AuthContext } from '../../../store/auth'
 import ModalContext from '../../../store/modal'
 
 import AddComment from '../add-comment'
-
+import { Addcomment } from '../../icons'
 import styles from './comment-list.module.css'
 
 const CommentList = ({
@@ -19,9 +19,9 @@ const CommentList = ({
   const [showAddComment, setShowAddComment] = useState(false)
   const [visibleComments, setVisibleComments] = useState(children.slice(0, 3))
   const [difference, setDiffrence] = useState(null)
-  
+
   useEffect(() => {
-    setVisibleComments(children.slice(0,3))  
+    setVisibleComments(children.slice(0, 3))
   }, [children])
 
   useEffect(() => {
@@ -33,7 +33,7 @@ const CommentList = ({
     <div className={styles.commentCell}>
       {visibleComments}
 
-      {difference > 0  ? (
+      {difference > 0 ? (
         <a
           className={styles.showMore}
           onClick={() => setVisibleComments(children)}
@@ -46,7 +46,7 @@ const CommentList = ({
             className={styles.addComment}
             onClick={() => isAuthenticated() ? setShowAddComment(true) : handleComponentVisible(true, 'signup')}
           >
-            add comment
+            < Addcomment />
           </a>
         )
       )}

@@ -36,6 +36,11 @@
   --BlackBG-100: #181C14;
   --Gray-100: #3C3D37;
   --GrayBorder-100: #697565;
+  /*Custom2*/
+  --whiteskin-1: #f9f8f9;
+  --skin-100: #fcd394;
+  --skin-200: #e3ac87;
+  --blueDark-200: #353490;
   /*Custom*/
   --fade: 120ms;
 }

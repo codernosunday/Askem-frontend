@@ -30,32 +30,26 @@
 }
 
 .addComment {
-  color: #ffffff; /* Giữ nguyên màu chữ trắng */
-  background-color: #0061d8; /* Thay đổi màu nền thành màu nền của .btnlogout */
-  border: 2px solid #2c2c2c; /* Thay đổi border thành 2px và màu giống .btnlogout */
-  box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.4);
-  padding: 0.2em 0.8em; /* Giảm padding để làm cho button nhỏ hơn */
-  width: 120px; /* Thiết lập chiều rộng tối thiểu để nội dung vừa vặn */
+  color: #ffffff;
+  padding: 0.2em 0.8em;
+  width: 50px;
   height: 34px;
-  display: inline-flex; /* Sử dụng inline-flex để căn giữa nội dung */
-  align-items: center; /* Căn giữa theo chiều dọc */
-  justify-content: center; /* Căn giữa theo chiều ngang */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   border-radius: 8px;
+  background-color: #0437f2;
 
   &:hover {
-    color: #ffffff; /* Giữ nguyên màu chữ trắng khi hover */
-    background-color: #2581f1; /* Thay đổi màu nền khi hover giống .btnlogout */
-    border-color: #666666; /* Thay đổi màu viền khi hover giống .btnlogout */
-  }
-
-  &:active {
-    background-color: #1a1a1a; /* Giữ nguyên màu nền khi active */
-    box-shadow: none;
+    color: #ffffff;
+    background-color: #0437f2;
   }
 
   &:focus {
-    color: #ffffff; /* Giữ nguyên màu chữ trắng khi focus */
-    background-color: #292929; /* Thay đổi màu nền khi focus giống .btnlogout */
+    color: #ffffff;
+    /* Giữ nguyên màu chữ trắng khi focus */
+    background-color: #292929;
+    /* Thay đổi màu nền khi focus giống .btnlogout */
     outline: none;
     box-shadow: 0 0 0 4px rgba(0, 149, 255, 0.15);
   }

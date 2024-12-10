@@ -4,3 +4,8 @@
     width: auto;
     background-color: #212121;
 }
+
+.color {
+    color: var(--skin-100);
+    font-weight: bolder;
+}

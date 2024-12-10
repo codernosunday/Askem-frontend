@@ -41,6 +41,10 @@ const SignupForm = () => {
         password: Yup.string()
           .required('Required')
           .min(6, 'Must be at least 6 characters long')
+          .matches(/[A-Z]/, 'Password must contain at least one uppercase letter')
+          .matches(/[a-z]/, 'Password must contain at least one lowercase letter')
+          .matches(/[0-9]/, 'Password must contain at least one digit')
+          .matches(/[@$!%*?&]/, 'Password must contain at least one special character')
           .max(50, 'Must be at most 50 characters long'),
         passwordConfirmation: Yup.string().oneOf(
           [Yup.ref('password'), null],

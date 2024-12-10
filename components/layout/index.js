@@ -8,10 +8,11 @@ import Sidebar from './sidebar'
 import Main from './main'
 import Extra from './extra'
 import Header from './header'
+import Footer from './footer'
 
 import styles from './layout.module.css'
 
-const Layout = ({ extra = true, children }) => {
+const Layout = ({ extra = true, children, footer = false }) => {
   const size = useWindowSize()
   return (
     <div className={styles.layout}>
@@ -21,8 +22,10 @@ const Layout = ({ extra = true, children }) => {
           {size.width > CONST.MOBILE_SIZE && <Sidebar />}
           <Main>{children}</Main>
           {size.width > CONST.TABLET_SIZE && extra && <Extra />}
+
         </div>
       </div>
+      {footer && (<Footer></Footer>)}
     </div>
   )
 }

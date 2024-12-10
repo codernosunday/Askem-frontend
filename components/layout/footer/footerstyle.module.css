@@ -1,0 +1,28 @@
+/* Toàn bộ footer */
+.footer {
+    background-color: var(--BlackBG-100);
+    /* Màu nền tối */
+    color: #ffffff;
+    /* Màu chữ trắng */
+    padding: 15px 10px;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+.links {
+    margin-bottom: 10px;
+}
+
+.link {
+    color: #1e90ff;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.link:hover {
+    text-decoration: underline;
+}
+
+.text {
+    color: #cccccc;
+}

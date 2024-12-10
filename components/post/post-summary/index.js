@@ -2,7 +2,7 @@ import React, { useContext } from 'react'
 import { useRouter } from 'next/router'
 import Link from 'next/link'
 import formatDistanceToNowStrict from 'date-fns/formatDistanceToNowStrict'
-
+import { Delete } from '../../icons'
 import { AuthContext } from '../../../store/auth'
 import { FetchContext } from '../../../store/fetch'
 
@@ -75,7 +75,7 @@ const PostSummary = ({
         {(authState.userInfo?.id === author.id || isAdmin()) && (
           <div className={styles.row}>
             <a className={styles.delete} onClick={() => handleDeleteComment()}>
-              delete
+              < Delete />
             </a>
           </div>
         )}

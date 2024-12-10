@@ -15,8 +15,10 @@ const AuthForms = ({ screen = 'signup' }) => {
       <Head>
         <title>{form == 'login' ? 'Log In' : 'Sign Up'} - Askem</title>
       </Head>
+      <div className={styles.logo}>
+        <Logo />
+      </div>
 
-      <Logo className={styles.logo} />
 
       {form === 'login' ? <LoginForm /> : <SignUpForm />}
 

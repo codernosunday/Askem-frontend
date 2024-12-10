@@ -65,114 +65,104 @@ const UsersManage = () => {
 
     return (
         <>
-    <div className={styles.containerusergroup}>
-        <div className={styles.leftColumn}>
-            <PageTitle title="Request to join group &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" borderBottom={false} className={styles.pageTitle} />
-            {!waitList && (
-                <div className={styles.loading}>
-                    <Spinner />
-                </div>
-            )}
-
-            {waitList && (
-                <>
-                    <UserList>
-                        {waitList?.map(({ username, profilePhoto, id }) => (
-                            <UserItem
-                                key={id}
-                                username={username}
-                                profilePhoto={profilePhoto}
-                                group={valueGroup.inGroup}
-                                outGroup={true}
-                                className={styles.userItem}
-                            />
-                        ))}
-                    </UserList>
-                    {waitList.length == 0 && (
-                        <p className={styles.notFound}>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;No request yet</p>
+            <div >
+                <div>
+                    <PageTitle title="Request to join group &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" borderBottom={false} className={styles.pageTitle} />
+                    {!waitList && (
+                        <div className={styles.loading}>
+                            <Spinner />
+                        </div>
                     )}
-                </>
-            )}
+
+                    {waitList && (
+                        <>
+                            <UserList>
+                                {waitList?.map(({ username, profilePhoto, id }) => (
+                                    <UserItem
+                                        key={id}
+                                        username={username}
+                                        profilePhoto={profilePhoto}
+                                        group={valueGroup.inGroup}
+                                        outGroup={true}
+                                        className={styles.userItem}
+                                    />
+                                ))}
+                            </UserList>
+                            {waitList.length == 0 && (
+                                <p className={styles.notFound}>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;No request yet</p>
+                            )}
+                        </>
+                    )}
 
 
 
 
-<PageTitle title="Member in group" borderBottom={false} className={styles.pageTitle} />
-        <SearchInput
-            placeholder="Search by user"
-            isLoading={loading}
-            autoFocus
-            autoComplete="off"
-            type="text"
-            onChange={(e) => setSearchTerm(e.target.value)}
-            className={styles.searchInput}
-        />
+                    <PageTitle title="Member in group" borderBottom={false} className={styles.pageTitle} />
+                    {!users && (
+                        <div className={styles.loading}>
+                            <Spinner />
+                        </div>
+                    )}
 
-        {!users && (
-            <div className={styles.loading}>
-                <Spinner />
-            </div>
-        )}
+                    {users && (
+                        <>
+                            <UserList>
+                                {users?.map(({ username, profilePhoto, id }) => (
+                                    <UserItem
+                                        key={id}
+                                        username={username}
+                                        profilePhoto={profilePhoto}
+                                        group={valueGroup.inGroup}
+                                        inGroup={true}
+                                        outGroup={false}
+                                        className={styles.userItem}
+                                    />
+                                ))}
+                            </UserList>
+                            {users.length == 0 && (
+                                <p className={styles.notFound}>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Don't have member</p>
+                            )}
+                        </>
+                    )}
+                </div>
 
-        {users && (
-            <>
-                <UserList>
-                    {users?.map(({ username, profilePhoto, id }) => (
-                        <UserItem
-                            key={id}
-                            username={username}
-                            profilePhoto={profilePhoto}
-                            group={valueGroup.inGroup}
-                            inGroup={true}
-                            outGroup={false}
-                            className={styles.userItem}
-                        />
-                    ))}
-                </UserList>
-                {users.length == 0 && (
-                    <p className={styles.notFound}>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;No users matched your search.</p>
-                )}
-            </>
-        )}
-        </div>
+                {valueGroup.isAuthor && (
+                    <div>
+                        <PageTitle title="List Admin" borderBottom={false} className={styles.pageTitle} />
+                        {!listAdmin && (
+                            <div className={styles.loading}>
+                                <Spinner />
+                            </div>
+                        )}
 
-        {valueGroup.isAuthor && (
-            <div className={styles.rightColumn}>
-                <PageTitle title="List Admin" borderBottom={false} className={styles.pageTitle} />
-                {!listAdmin && (
-                    <div className={styles.loading}>
-                        <Spinner />
+                        {listAdmin && (
+                            <>
+                                <UserList>
+                                    {listAdmin?.map(({ username, profilePhoto, id }) => (
+                                        <UserItem
+                                            key={id}
+                                            username={username}
+                                            profilePhoto={profilePhoto}
+                                            group={valueGroup.inGroup}
+                                            inGroup={false}
+                                            outGroup={false}
+                                            admin={true}
+                                            className={styles.userItem}
+                                        />
+                                    ))}
+                                </UserList>
+                                {listAdmin.length == 0 && (
+                                    <p className={styles.notFound}>Add admin to your group.</p>
+                                )}
+                            </>
+                        )}
                     </div>
                 )}
-
-                {listAdmin && (
-                    <>
-                        <UserList>
-                            {listAdmin?.map(({ username, profilePhoto, id }) => (
-                                <UserItem
-                                    key={id}
-                                    username={username}
-                                    profilePhoto={profilePhoto}
-                                    group={valueGroup.inGroup}
-                                    inGroup={false}
-                                    outGroup={false}
-                                    admin={true}
-                                    className={styles.userItem}
-                                />
-                            ))}
-                        </UserList>
-                        {listAdmin.length == 0 && (
-                            <p className={styles.notFound}>Add admin to your group.</p>
-                        )}
-                    </>
-                )}
             </div>
-        )}
-    </div>
 
 
 
-</>
+        </>
     )
 }
 

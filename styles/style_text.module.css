@@ -1,0 +1,19 @@
+.container {
+
+    strong {
+        font-weight: bold !important;
+    }
+
+    em {
+        font-style: italic !important;
+    }
+
+    pre {
+        background-color: #f4f4f4 !important;
+        color: #333;
+        font-family: 'Courier New', monospace !important;
+        padding: 10px !important;
+        border-radius: 5px !important;
+        overflow-x: auto !important;
+    }
+}

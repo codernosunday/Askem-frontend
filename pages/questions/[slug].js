@@ -16,7 +16,8 @@ import AddAnswer from '../../components/add-answer'
 //
 import Image from '../../components/image-question'
 import { Spinner } from '../../components/icons'
-
+import style from '../../styles/style_text.module.css'
+import 'react-quill/dist/quill.snow.css';
 const QuestionDetail = ({ questionId, title }) => {
   const [question, setQuestion] = useState(null)
   const [answerSortType, setAnswersSortType] = useState('Votes')
@@ -76,7 +77,7 @@ const QuestionDetail = ({ questionId, title }) => {
                 questionId={questionId}
               >
                 {/* {question.text} */}
-                <div dangerouslySetInnerHTML={{ __html: question.text }} />
+                <div className={style.container} dangerouslySetInnerHTML={{ __html: question.text }} />
                 {question.image && <Image base64String={question.image} altText='Image' />}
               </PostSummary>
               <CommentList questionId={questionId} setQuestion={setQuestion}>

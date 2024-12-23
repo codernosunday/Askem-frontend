@@ -13,7 +13,6 @@ const TagProvider = ({ children }) => {
       const { data } = await publicFetch.get('/tags/populertags')
       setTagState(data)
     }
-
     fetchPopularTags()
   }, [])
 
